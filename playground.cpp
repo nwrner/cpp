@@ -1,6 +1,7 @@
+#include <cstdlib>
+#include <ctime>
 #include <iostream> 
 using namespace std; 
-
 
 
 int main () { 
@@ -44,26 +45,70 @@ int main () {
 	}
 	
 	if (choice=="R") {
+		int rounds;
+		int count; 
 		cout<<"=================================="<<endl;
 		cout<<"       Rock, Paper, Scissors      "<<endl;
 		cout<<"=================================="<<endl; 
 		cout<<"                 made by WarHammer"<<endl; 
 		cout<<"=================================="<<endl; 
-		string ai="Rock"; 
+		cout<<"How many rounds would you like to play?: ";
+		cin>>rounds; 
+		while (rounds!=count) {
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		}
 		string player; 
 		cout<<"Rock, paper, or scissors?: "; 
 		cin>>player; 
-		if (player=="Paper") {
-			cout<<"AI chose Rock. You win!";
+		srand(time(NULL));
+		int a;
+		string ai; 
+		a=rand() % 9;
+		if (a==1 or a==2 or a==3) {
+			ai="Rock";
 		}
-		if (player=="Rock") {
-			cout<<"AI chose Rock. Go again."; 
+		if (a==4 or a==5 or a==6) { 
+			ai="Paper";
 		}
-		if (player=="Scissors") {
-			cout<<"Ai chose Rock. You lose!"; 
+		if (a==7 or a==8 or a==9) {
+			ai="Scissors";
 		}
-		}else {
-			cout<<"No valid choice detected. Exiting."; 
-			return 0; 
+		cout<<"The AI chose" << " " << ai << endl; 
+		if (ai==player) { 
+			cout<<"Draw!"; 
+		}
+		if (ai=="Rock" and player=="Scissors") {
+			cout<<"You lose!"; 
+		}
+		if (ai=="Paper" and player=="Rock") {
+			cout<<"You lose!"; 
+		}
+		if (ai=="Scissors" and player=="Paper") {
+			cout<<"You lose!"; 
+		}
+		if (ai=="Rock" and player=="Paper") {
+			cout<<"You win!"; 
+		}
+		if (ai=="Paper" and player=="Scissors") {
+			cout<<"You win!"; 
+		}
+		if (ai=="Scissors" and player=="Rock") {
+			cout<<"You win!"; 
+		}
+	   }else {
+		cout<<"No valid choice detected. Exiting."; 
+		return 0; 
 	}  
 }
