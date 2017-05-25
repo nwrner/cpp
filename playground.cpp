@@ -14,8 +14,8 @@ int main () {
 	cout<<endl; 
 	cout<<endl; 
 	cout<<"==What would you like to play?=="<<endl;
-	cout<<"(N)umber guess: "<<endl;
-	cout<<""<<endl;
+	cout<<"(N)umber guess: A random number is generated and your goal is to guess it."<<endl;
+	cout<<"(R)ock, Paper, Scissors: Classic game of Rock, Paper, Scissors agains the computer."<<endl;
 	cout<<""<<endl;  
 	cout<<"I would like to play: "; 
 	cin>>choice; 
@@ -38,10 +38,32 @@ int main () {
 		if (guess==act) {
 			cout<<endl; 
 			cout<<"Correct!" << endl; 
-			cout<<"You guessed " << total << " times!"; 
+			cout<<"You guessed " << total << " times!";
+			
 		} 
-	}else{ 
-		cout<<"No choice detected. Exiting."; 
-		return 0; 
+	}
+	
+	if (choice=="R") {
+		cout<<"=================================="<<endl;
+		cout<<"       Rock, Paper, Scissors      "<<endl;
+		cout<<"=================================="<<endl; 
+		cout<<"                 made by WarHammer"<<endl; 
+		cout<<"=================================="<<endl; 
+		string ai="Rock"; 
+		string player; 
+		cout<<"Rock, paper, or scissors?: "; 
+		cin>>player; 
+		if (player=="Paper") {
+			cout<<"AI chose Rock. You win!";
+		}
+		if (player=="Rock") {
+			cout<<"AI chose Rock. Go again."; 
+		}
+		if (player=="Scissors") {
+			cout<<"Ai chose Rock. You lose!"; 
+		}
+		}else {
+			cout<<"No valid choice detected. Exiting."; 
+			return 0; 
 	}  
 }
