@@ -17,10 +17,10 @@ int main () {
 	cout<<"==What would you like to play?=="<<endl;
 	cout<<"(N)umber guess: A random number is generated and your goal is to guess it."<<endl;
 	cout<<"(R)ock, Paper, Scissors: Classic game of Rock, Paper, Scissors agains the computer."<<endl;
-	cout<<""<<endl;  
+	cout<<"(D)iplomacy Simulator: CLI version of Europe Universalis 4"<<endl;  
 	cout<<"I would like to play: "; 
 	cin>>choice; 
-	
+	/*Beginning of Number Guesser Sequence*/ 
 	if (choice=="N") {
 		cout<<"=================================="<<endl;
 		cout<<"          Number Guesser          "<<endl;
@@ -43,34 +43,17 @@ int main () {
 			
 		} 
 	}
+	/*End of Number Guesser Sequence*/ 
 	
+	/*Beginning of RPS Sequence*/ 
 	if (choice=="R") {
-		int rounds;
-		int count; 
 		cout<<"=================================="<<endl;
 		cout<<"       Rock, Paper, Scissors      "<<endl;
 		cout<<"=================================="<<endl; 
 		cout<<"                 made by WarHammer"<<endl; 
 		cout<<"=================================="<<endl; 
-		cout<<"How many rounds would you like to play?: ";
-		cin>>rounds; 
-		while (rounds!=count) {
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		}
 		string player; 
-		cout<<"Rock, paper, or scissors?: "; 
+		cout<<"Rock, paper, or scissors? (Enter choices as they appear): "; 
 		cin>>player; 
 		srand(time(NULL));
 		int a;
@@ -106,9 +89,16 @@ int main () {
 		}
 		if (ai=="Scissors" and player=="Rock") {
 			cout<<"You win!"; 
-		}
-	   }else {
-		cout<<"No valid choice detected. Exiting."; 
-		return 0; 
-	}  
+		}	
+	   }
+	   /*Conclusion of RPS Sequence*/ 
+	if (choice=="D") { 
+		string country;
+		cout<<"=================================="<<endl;
+		cout<<"         Diplo Simulator          "<<endl;
+		cout<<"=================================="<<endl; 
+		cout<<"                 made by WarHammer"<<endl; 
+		cout<<"=================================="<<endl; 
+	}
 }
+
